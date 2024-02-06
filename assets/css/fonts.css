@@ -1,0 +1,24 @@
+@font-face{
+	font-family:'Vonnes-Book';
+	src:url('../fonts/Vonnes-Book.otf');
+}
+@font-face{
+	font-family:'Vonnes-BookCondensed';
+	src:url('../fonts/Vonnes-BookCondensed.otf');
+}
+@font-face{
+	font-family:'Vonnes-Medium';
+	src:url('../fonts/Vonnes-Medium.otf');
+}
+@font-face{
+	font-family:'Vonnes-MediumCondensed';
+	src:url('../fonts/Vonnes-MediumCondensed.otf');
+}
+@font-face{
+	font-family:'Vonnes-MediumExtended';
+	src:url('../fonts/Vonnes-MediumExtended.otf');
+}
+@font-face{
+	font-family:'Vonnes-ThinCondensed';
+	src:url('../fonts/Vonnes-ThinCondensed.otf');
+}

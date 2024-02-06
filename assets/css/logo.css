@@ -1,0 +1,55 @@
+#tile-grid, #tile-grid *{
+	box-sizing: border-box;
+}
+#tile-grid{
+	width:100vw;
+	height:100vh;
+	display: grid;
+	font-family: Vonnes-MediumCondensed;
+	padding:10px;
+	cursor:pointer;
+}
+.tile{
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	color:white;
+	opacity: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+/*	transition-property: opacity;*/
+/*	transition-duration: 800ms;*/
+}
+
+.tile.color{
+	background-color: #1D7DB9;
+}
+
+.c3r2-H{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+/*	aspect-ratio: 3 / 2;*/
+}
+.c3r2{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+/*	aspect-ratio: 3 / 2;*/
+}
+.c3r3{
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+/*	aspect-ratio: 1 / 1;*/
+}
+.c2r3{
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+/*	aspect-ratio: 2 / 3;*/
+}
+.c1r3{
+	grid-template-columns: none;
+	grid-template-rows: repeat(3, 1fr);
+/*	aspect-ratio: 1 / 3;*/
+}
