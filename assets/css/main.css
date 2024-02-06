@@ -35,17 +35,17 @@ body{
 
 /* SCROLL SNAP */
 html,body{
-	height:100vh;
+	height:100svh;
 	overflow: hidden;
 }
 body > section{
-	height:100vh;
+	height:100svh;
 	overflow: scroll;
 	scroll-snap-type: y mandatory;
 }
 
 section#tile-grid, main{
-	height: 100vh;
+	height: 100svh;
 	scroll-snap-align: start;
 }
 
@@ -327,7 +327,7 @@ main.dark .slide-header{
 }
 .slide-content{
 	padding-top: 12em;
-	height:100vh;
+	height:100svh;
 	overflow: hidden;
 /*	outline: 1px solid blue;*/
 }
