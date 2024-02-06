@@ -1,27 +1,24 @@
 html{ font-size: 1.2em; }
-@media all and (max-width: 96em) { 
+@media all and (max-width: 86em) { 
 	html{ font-size: 1.1em; }
 }
-@media all and (max-width: 88em) { 
+@media all and (max-width: 78em) { 
 	html{ font-size: 1em; }
 }
-@media all and (max-width: 82em) { 
+@media all and (max-width: 72em) { 
 	html{ font-size: 0.9em; }
 }
-@media all and (max-width: 74em) { 
+@media all and (max-width: 64em) { 
 	html{ font-size: 0.8em; }
 }
-@media all and (max-width: 68em) { 
+@media all and (max-width: 58em) { 
 	html{ font-size: 0.7em; }
 }
-@media all and (max-width: 52em) { 
+@media all and (max-width: 42em) { 
 	html{ font-size: 0.6em; }
 }
-@media all and (max-width: 48em) { 
+@media all and (max-width: 38em) { 
 	html{ font-size: 0.5em; }
-}
-@media all and (max-width: 28em) { 
-	html{ font-size: 0.4em; }
 }
 
 :root{
@@ -66,15 +63,62 @@ main{
 /*	gap:4em;*/
 }
 main > header{
-	padding: 1em 5em 1em 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1em 3em 1em 1em;
 }
+
+
+/* slide prev next buttons */
+main.dark #prevNextButton{
+	visibility: hidden;
+}
+main.light #prevNextButton{
+	visibility: visible;
+}
+#prevNextButton{
+	width: 100%;
+	display: flex;
+	gap:1.5em;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#prevNextButton .slide-button{
+	width:1.5em;
+	height:1.5em;
+	aspect-ratio: 1/1;
+}
+.slide-button:hover polygon{
+	fill:dodgerblue;
+}
+.slide-button.clicked polygon{
+	fill:dodgerblue;
+}
+.slide-button.deactive{
+	pointer-events: none;
+	opacity: 0.25;
+}
+.slide-button.deactive.clicked polygon{
+	fill:black;
+}
+#prevButton{
+	transform: rotate(90deg);
+}
+#nextButton{
+	transform: rotate(90deg);
+}
+
+
+
+
 @media all and (max-width: 48em) { 
 	main{
 		flex-direction: column;
 /*		gap:2em;*/
 	}
 	main > header{
-		padding: 1em 1em 3em 1em;
+		padding: 1em;
 	}
 }
 
@@ -98,6 +142,23 @@ main > section{
 	display: flex;
 	flex-direction: row;
 	grid-gap: 1em;
+}
+
+main.dark{
+	background-color: #000;
+}
+
+main.dark h1, main.dark h2, main.dark h3{
+	color:#fff;
+} 
+
+main.light h1, main.light h2, main.light h3{
+	color:#000;
+}
+
+main, main h1, main h2, main h3{
+	transition-property: background-color, color;
+	transition-duration: 500ms;
 }
 
 
@@ -167,9 +228,12 @@ main > section{
 	width:1.5em;
 	height:1.5em;
 	aspect-ratio: 1/1;
-	position: relative;
+/*	position: relative;*/
 }
-.closeButton::before, .closeButton::after{
+.closeButton:hover polygon{
+	fill:dodgerblue;
+}
+/*.closeButton::before, .closeButton::after{
 	position: absolute;
     content: '';
     width: 100%;
@@ -182,7 +246,7 @@ main > section{
 }
 .closeButton::after{
 	transform: rotate(-45deg);
-}
+}*/
 
 
 
@@ -193,10 +257,25 @@ main > section{
 	top:0;
 }
 
+/* .slide-header dark - light */
+main .slide-header{
+	transition-property: background-color;
+	transition-duration: 500ms;
+}
+main.light .slide-header{
+	background-color: #ffffff;
+/*	color: #000;*/
+}
+main.dark .slide-header{
+	background-color: #000;
+/*	color:#fff;*/
+}
+
 
 /* .slide .OPEN and .CLOSED */
 .slide.closed .title{
 	width:100%;
+/*	background-color: #000;*/
 }
 .slide.closed .subtitle,
 .slide.closed .slide-contents,
@@ -208,9 +287,9 @@ main > section{
 }
 
 .slide.open .slide-header{
-	background-color: #fff;
 	padding-bottom: 1em;
 }
+
 .slide.open .title,
 .slide.open .subtitle{
 	width:50%;
@@ -232,7 +311,10 @@ main > section{
 
 
 /* .slide TRANSITION */
-.slide .title, .slide .subtitle, .slide h2, .slide .slide-contents{
+.slide .title, 
+.slide .subtitle, 
+.slide h2, 
+.slide .slide-contents{
 	transition-property: width;
 	transition-duration: 500ms;
 }
@@ -244,10 +326,13 @@ main > section{
 	flex-direction: column;
 }
 .slide-content{
-	padding-top: 9em;
+	padding-top: 12em;
+	height:100vh;
+	overflow: hidden;
+/*	outline: 1px solid blue;*/
 }
-.slide-contents .slide-content:last-child{
-	padding-bottom: 9em;
+.slide-contents .slide-content:first-child{
+	padding-top: 6em;
 }
 
 /* CRUCIAL */
@@ -267,6 +352,13 @@ main > section{
 /*	outline: 1px solid red;*/
 }
 
+/*main{
+	scroll-snap-type: y mandatory;
+}
+.slide .slide-content{
+	scroll-snap-align: start;
+}*/
+
 
 
 
@@ -278,10 +370,9 @@ main > section{
 
 
 /* CURSOR */
-a, .closeButton{
+a, .closeButton, .slide-button{
 	cursor: pointer;
 }
-
 
 /* GENERAL TYPOGRAPHY */
 a{
