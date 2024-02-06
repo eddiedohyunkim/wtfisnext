@@ -1,24 +1,27 @@
 html{ font-size: 1.2em; }
-@media all and (max-width: 86em) { 
+@media all and (max-width: 96em) { 
 	html{ font-size: 1.1em; }
 }
-@media all and (max-width: 78em) { 
+@media all and (max-width: 88em) { 
 	html{ font-size: 1em; }
 }
-@media all and (max-width: 72em) { 
+@media all and (max-width: 82em) { 
 	html{ font-size: 0.9em; }
 }
-@media all and (max-width: 64em) { 
+@media all and (max-width: 74em) { 
 	html{ font-size: 0.8em; }
 }
-@media all and (max-width: 58em) { 
+@media all and (max-width: 68em) { 
 	html{ font-size: 0.7em; }
 }
-@media all and (max-width: 42em) { 
+@media all and (max-width: 52em) { 
 	html{ font-size: 0.6em; }
 }
-@media all and (max-width: 38em) { 
+@media all and (max-width: 48em) { 
 	html{ font-size: 0.5em; }
+}
+@media all and (max-width: 28em) { 
+	html{ font-size: 0.4em; }
 }
 
 :root{
