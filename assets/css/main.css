@@ -1,24 +1,24 @@
-html{ font-size: 1.2em; }
+html{ font-size: 1.1em; }
 @media all and (max-width: 86em) { 
-	html{ font-size: 1.1em; }
-}
-@media all and (max-width: 78em) { 
 	html{ font-size: 1em; }
 }
-@media all and (max-width: 72em) { 
+@media all and (max-width: 78em) { 
 	html{ font-size: 0.9em; }
 }
-@media all and (max-width: 64em) { 
+@media all and (max-width: 72em) { 
 	html{ font-size: 0.8em; }
 }
-@media all and (max-width: 58em) { 
+@media all and (max-width: 64em) { 
 	html{ font-size: 0.7em; }
 }
-@media all and (max-width: 42em) { 
+@media all and (max-width: 58em) { 
 	html{ font-size: 0.6em; }
 }
-@media all and (max-width: 38em) { 
+@media all and (max-width: 42em) { 
 	html{ font-size: 0.5em; }
+}
+@media all and (max-width: 38em) { 
+	html{ font-size: 0.4em; }
 }
 
 :root{
@@ -67,6 +67,9 @@ main > header{
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 1em 3em 1em 1em;
+}
+main > header, .slide-header, .slide-shortcuts{
+	font-size: 0.9em;
 }
 
 
@@ -327,13 +330,13 @@ main.dark .slide-header{
 	flex-direction: column;
 }
 .slide-content{
-	padding-top: 12em;
+	padding-top: 8.5em;
 	height:100svh;
 	overflow: hidden;
-/*	outline: 1px solid blue;*/
+	outline: 1px solid blue;
 }
 .slide-contents .slide-content:first-child{
-	padding-top: 6em;
+	padding-top: 1em;
 }
 
 /* CRUCIAL */
