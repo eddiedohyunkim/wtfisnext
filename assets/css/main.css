@@ -330,13 +330,13 @@ main.dark .slide-header{
 	flex-direction: column;
 }
 .slide-content{
-	padding-top: 8.5em;
+	padding-top: 9.5em;
 	height:100svh;
 	overflow: hidden;
-	outline: 1px solid blue;
+/*	outline: 1px solid blue;*/
 }
 .slide-contents .slide-content:first-child{
-	padding-top: 1em;
+	padding-top: 2em;
 }
 
 /* CRUCIAL */

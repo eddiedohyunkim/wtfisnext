@@ -150,11 +150,16 @@
 	object-fit: cover;
 }
 
+.slide-content-main figure.sectionCover img{
+	max-height: calc(100svh - 10.75em);
+/*	outline:10px dashed red;*/
+}
+
 .slide-content-main figure img{
-	max-height: calc(100svh - 8.75em);
+	max-height: calc(100svh - 12.75em);
 }
 .color-block{
-	height: calc(100svh - 8.75em);
+	height: calc(100svh - 12.75em);
 }
 
 .slide-content-main figure figcaption{
