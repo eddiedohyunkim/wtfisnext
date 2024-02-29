@@ -298,6 +298,14 @@ main.dark .slide-header{
 .slide.open .subtitle{
 	width:50%;
 }
+
+.slide.open .title{
+/*	width:33.3333%;*/
+}
+.slide.open .subtitle{
+/*	width:66.6666%;*/
+}
+
 .slide.open h2{
 	width:var(--width);
 }
@@ -399,8 +407,9 @@ h2, .marker, h3{
 }
 h4{
 	font-family:'Vonnes-MediumCondensed';
-	font-size: 1.5em;
+	font-size: 1.75em;
 	text-transform: uppercase;
+	line-height: 1.1;
 }
 
 
