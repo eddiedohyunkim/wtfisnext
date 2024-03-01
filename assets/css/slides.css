@@ -69,6 +69,15 @@
 	justify-content: space-between;
 }
 
+.slide-content-main .line-flex{
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: center;
+	gap:0.5em;
+}
+
 .slide-content-main .big{
 	font-size: 1.5em;
 }
